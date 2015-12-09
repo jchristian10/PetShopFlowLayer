@@ -1,0 +1,21 @@
+﻿<div class="row" ng-show="details.pet">
+    <div class="col-md-5">
+        <img ng-src="{{details.pet.imageUrl}}" class="img-responsive" />
+    </div>
+    <div class="col-md-7">
+        <div class="row">
+            <h1>{{details.pet.name}}</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                {{details.pet.species}}
+            </div>
+            <div class="col-md-6">
+                {{details.pet.owner}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" ng-show="!details.pet">
+    <h1>Oops! Looks like you don't have a pet here :(</h1>
+</div>

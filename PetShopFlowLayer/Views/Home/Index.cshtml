@@ -1,0 +1,23 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" ng-app="PetShopFlowLayer">
+<head>
+    <title></title>
+
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/Scripts/angular")
+    @Scripts.Render("~/Scripts/ngApp")
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <a href="#/" class="btn btn-default">Home</a>
+            <span ng-controller="authController as auth">
+                <a href="#/login" class="btn btn-default" ng-show="!auth.isLoggedIn()">Login</a>
+                <span class="btn btn-default" ng-click="auth.logout()" ng-show="auth.isLoggedIn()">Logout</span>
+            </span>
+        </div>
+        <ng-view></ng-view>
+    </div>
+</body>
+</html>

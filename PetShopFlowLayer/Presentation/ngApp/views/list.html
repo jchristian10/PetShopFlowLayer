@@ -1,0 +1,11 @@
+﻿<div class="row">
+    <div class="col-md-4" ng-repeat="pet in list.pets">
+        <div class="col-md-12">
+            <a href="#/details/{{pet.id}}">{{pet.name}}</a>
+        </div>
+        <div class="col-md-12">{{pet.species}}</div>
+        <div class="col-md-12">
+            <img ng-src="{{pet.imageUrl}}" class="img-responsive"/>
+        </div>
+    </div>
+</div>
